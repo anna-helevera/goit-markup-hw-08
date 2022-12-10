@@ -1,0 +1,26 @@
+.work-gallery {
+    display: flex;
+    gap: 30px;
+  }
+  .work-gallery__item{
+    width: calc((100% - 60px) / 3); 
+    position: relative;
+  }
+  .section.work {
+    padding-top:0;
+  }
+  .work-gallery__text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    line-height: calc(16/14);
+    padding: 27px;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }

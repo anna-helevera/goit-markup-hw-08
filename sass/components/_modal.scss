@@ -1,0 +1,180 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  }
+  .modal {
+    position: absolute;
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--primary-color);
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .backdrop.is-hidden &{
+      transform: translate(-50%, -50%) scale(0) rotate(-360deg);
+      border-radius: 50%;
+    }
+  }
+  
+  .modal-close{
+    position: absolute;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--title-color);
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+    border-color: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    }
+  }
+  .modal-icon{
+    fill: currentColor;
+  }
+  .is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  .modal-title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23/20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+    margin-bottom: 15px;
+  }
+  .modal-field{
+  margin-bottom: 10px;
+  }
+  .input-wrap{
+    position: relative;
+    /* margin-bottom: 28px; */
+  }
+  .input-icon{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .modal-input:focus + &, .modal-input:hover + & {
+      fill: #2196F3;
+    }
+  }
+  .modal-input{
+    width: 100%;
+    height: 45px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    background-color: transparent;
+    padding-left: 42px; 
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;  
+    outline: transparent; 
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus, &:hover{
+      border-color: #2196F3;
+    }
+  }
+  
+ 
+  .input-label{
+    display: block;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;  
+    margin-bottom: 4px;
+  }
+  .modal-comment{
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2); ;
+    border-radius: 4px;
+    resize: none;
+    padding: 17px;
+    color: var(--text-color);
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &::placeholder{
+      font-size: 12px;
+      line-height: calc(14/12);
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+    }
+    &:hover, &:focus{
+      border-color: var(--accent-color);
+    }
+  }
+  
+  
+  .modal-contract{
+    display: flex;
+    padding-bottom: 30px;
+    justify-content: center;
+  }
+  .check-text{
+    line-height: calc(24/14);
+    display: flex;
+    align-items: center;
+  }
+  
+  .check-text span{
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-color);
+    border-radius: 2px;
+    margin-right: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .modal-check:hover + &,
+    .modal-check:focus + &{
+    border: 2px solid var(--accent-color);
+    }
+    .modal-check:checked + &{
+    background-color: var(--accent-color);
+    border: none;
+    fill: var(--primary-color);
+    }
+  }
+  
+  
+    
+  .contract{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: var(--accent-color);
+    margin-left: 4px;
+  }
+  .send-button{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  
