@@ -11,11 +11,13 @@
     
   .benefits-gallery{
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    flex-direction: column;
   }
   .benefits-gallery__item{
     display: block;
-    width: calc((100% - 90px) / 4);
+    width: 100%;
     &::before{
       content: '';
       display: block;
