@@ -2,12 +2,32 @@
   border: 1px solid #ECECEC
 }
 .header-band {
+  
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .header-logo{
   display: block;
   margin-right: 93px;
+}
+.menu-open{  
+  display: flex;
+  margin-left: auto;
+  border-color: transparent;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  fill: var(--title-color);
+  cursor: pointer;
+  // transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {  
+  fill: var(--accent-color);
+  }
+}
+.menu-icon{
+  fill: currentColor;
 }  
 .menu__item{
     /* outline: 2px solid red; */
@@ -19,7 +39,7 @@
 }
   
 .menu {
-    display: flex;
+    display: none;
     font-weight: 500;
     line-height: calc(16/14);  
     letter-spacing: 0.02em;
@@ -29,7 +49,7 @@
 .contact-header__item{
     /* outline: 2px solid red; */
   margin-right: 50px;
-  display: block;
+  display: none; 
   &:last-child {
     margin-right:0px
   }
@@ -39,7 +59,7 @@
   margin-right: auto;
 }
 .contact-header{
-    display: flex; 
+    display: none; 
       /* outline: 2px solid red;  */
     font-style: inherit;
     font-weight: 500;
@@ -51,7 +71,7 @@
   
 .menu__link{
   position: relative;
-  display: flex;
+  display: none; 
   gap: 10px;
   align-items: center;
   padding-top: 32px;
@@ -81,7 +101,7 @@
 }
 .contact-header__link{
   position: relative;
-  display: flex;
+  display: none; 
   gap: 10px;
   align-items: center;
   padding-top: 32px;
@@ -95,4 +115,5 @@
 }    
 .contact-header__icon{
   fill: currentColor; 
+  display: none; 
 }  

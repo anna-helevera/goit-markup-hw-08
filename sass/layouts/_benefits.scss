@@ -12,12 +12,20 @@
   .benefits-gallery{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     gap: 30px;
-    flex-direction: column;
+    
   }
   .benefits-gallery__item{
     display: block;
     width: 100%;
+    @media screen and (min-width:768px) {
+      width: calc((100% - 30px)/2);
+    }
+    @media screen and (min-width:1200px) {
+      max-width: calc((100% - 90px)/4);
+    }
     &::before{
       content: '';
       display: block;

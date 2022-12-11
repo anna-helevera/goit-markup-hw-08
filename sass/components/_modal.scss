@@ -8,8 +8,12 @@
   }
   .modal {
     position: absolute;
-    width: 528px;
-    min-height: 581px;
+    width: 450px;
+    min-height: 609px;
+    @media screen and (min-width:1200px) {
+      width: 528px;
+      min-height: 581px;
+    }
     background-color: var(--primary-color);
     top: 50%;
     left: 50%;
@@ -134,7 +138,14 @@
     justify-content: center;
   }
   .check-text{
-    line-height: calc(24/14);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.03em;
+    @media screen and (min-width:1200px) {
+      font-size: 14px;
+      line-height: calc(24/14);
+    }
     display: flex;
     align-items: center;
   }
@@ -165,9 +176,14 @@
     
   .contract{
     font-weight: 400;
-    font-size: 14px;
-    line-height: calc(24/14);
+    font-size: 12px;
+    line-height: calc(14/12);
     letter-spacing: 0.03em;
+    
+    @media screen and (min-width:1200px) {
+      font-size: 14px;
+      line-height: calc(24/14);
+    }
     text-decoration-line: underline;
     color: var(--accent-color);
     margin-left: 4px;

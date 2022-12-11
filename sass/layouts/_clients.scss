@@ -1,10 +1,21 @@
 .clients-gallery{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
   .clients-gallery__item{
-  width: calc((100% - 150px) / 6);
+    width: 100%;
+    @media screen and (min-width:480px) {
+      width:  calc((100% - 30px)/2);
+    }
+    @media screen and (min-width:768px) {
+      width: calc((100% - 90px)/3);
+    }
+    @media screen and (min-width:1200px) {
+      max-width: calc((100% - 150px) / 6);
+    }
+
 }
   .clients-gallery__link{
   width: 100%;
