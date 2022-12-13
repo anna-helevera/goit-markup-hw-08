@@ -1,11 +1,10 @@
 .filter{
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 15px;
     &:nth-child(3n) {
       margin-right: 0px;
-      }
-    width: 332px;
+      }    
     justify-content: left;
     align-content: center;
     margin-bottom: 40px;

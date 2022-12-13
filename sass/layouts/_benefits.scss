@@ -7,7 +7,11 @@
     font-weight: 700;
     line-height: calc(16/14);
     font-size: inherit;
-    text-transform: uppercase;}
+    text-transform: uppercase;
+    @media screen and (max-width:767px) {
+      text-align: center;
+    }
+  }
     
   .benefits-gallery{
     display: flex;
@@ -38,7 +42,6 @@
       background-position: center;
     }
   }
-  
   .antenna::before{
     background-image: url(../image/antenna-1.svg);
   }
