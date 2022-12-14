@@ -1,7 +1,7 @@
 .filter{
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 15px 8px;
     &:nth-child(3n) {
       margin-right: 0px;
       }    
